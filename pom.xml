@@ -5,14 +5,6 @@
 
     <modelVersion>4.0.0</modelVersion>
     
-    <!-- Parent POM -->
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.5.RELEASE</version>
-        <relativePath/> <!-- If your parent POM is not in the same directory as this pom.xml, specify the path here -->
-    </parent>
-    
     <!-- Project Information -->
     <groupId>com.mydeveloperplanet</groupId>
     <artifactId>myawscdplanet</artifactId>
@@ -23,6 +15,7 @@
     <!-- Properties -->
     <properties>
         <java.version>11</java.version>
+        <spring-boot.version>2.3.5.RELEASE</spring-boot.version>
     </properties>
 
     <!-- Dependencies -->
@@ -36,12 +29,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.junit.vintage</groupId>
-                    <artifactId>junit-vintage-engine</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
     </dependencies>
 
@@ -51,6 +38,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
             </plugin>
         </plugins>
     </build>
