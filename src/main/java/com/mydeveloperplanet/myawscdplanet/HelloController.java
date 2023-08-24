@@ -17,7 +17,7 @@ public class HelloController {
             message += " From host: " + ip;
         } catch (UnknownHostException e) {
             e.printStackTrace();
-        }
+        
         return message;
     }
 
